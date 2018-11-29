@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/grayscale.css" rel="stylesheet">
+     <link href="/public/css/style.css" rel="stylesheet">
+      <link href="/public/css/button.css" rel="stylesheet">
+      <link href="/public/css/signupbutton.css" rel="stylesheet">
+
+      <style>.box2{
+  color: white;
+  background-color:grey;
+    width: 80%;
+    border: 10px solid white;
+    padding: auto;
+    margin: 90px;
+    text-align: justify;
+    font-size: 18px;
+}</style>
+
+	<title></title>
+	
+	 <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="profile">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="page3">Specifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="projectplan">Project Plan</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="feed">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="first">Home</a>
+            </li>
+          </ul>
+        </div>
+     </head>
+<body>
+	<header>	
+		<h1>Feed</h1>
+		
+
+  </header>
+<form>
+			<input type="button" value="Add Event" onclick=  "window.location.href='/form'"</a>
+</form>
+<input type="button" value="home" onclick=  "window.location.href='/first'"</a>
+
+    {% for texts in text %}
+        <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
+    {% endfor %}
+    {% if not text %}
+
+<div class= "box2">
+	<h2>MU karaoke night</h2>
+	<h2>November 22nd, 2017</h2>
+	<h3>Price range: free to ASU student</h3>
+	Karaoke night from 6PM - 9PM. All skill levels welcome! Free for ASU students, must bring ASU ID to participate.
+</div>
+<div class= "box2">
+	<h2>Hiking for Charity</h2>
+	<h2>February 22nd, 2019</h2>
+	<h3>Price range: free, donations appreciated</h3>
+	Join ASU hiking club as they scale A mountain. The club will be accepting donations, all proceeds will go to the club's favorite non-profit. Students will meet on the west side of ASU's Fulton Center at 4PM, by the Panda Express.  
+</div>
+<div class= "box2">
+	<h2>Lorem</h2>
+	<h2>November 2019</h2>
+	<h3>Price range: free</h3>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
+</div>
+<div class= "box2">
+	<h2>Ipsum @ Dolor</h2>
+	<h2>January 2020</h2>
+	<h3>Price range: free, food not included</h3>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
+</div>
+
+{% endif %}
+
+</body>
+</html>
+
+
+
+
+
+
+

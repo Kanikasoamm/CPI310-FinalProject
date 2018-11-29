@@ -1,0 +1,184 @@
+page3
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial;
+    color: white;
+}
+
+
+h1{
+  text-align: center;
+  color: black;
+  font-family: Arial;
+}
+nav ul{
+      list-style-type:none;
+      margin:10;
+      padding:10px;
+      overflow: hidden;
+      }
+    nav li{
+            float:right;
+      }
+     nav li a{
+            display: block;
+            color: white;
+            text-align: left;
+            padding: 12px 14px;
+            text-decoration: none;
+      }
+
+       nav a:link{
+      color:#7B9393;
+      }
+      nav a:visited{
+      color:#7B9393;
+      }
+      nav a:hover{
+      color:#D8C6AD;
+      }
+
+.split {
+    height: 30%;
+    width: 45.5%;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    overflow-x: hidden;
+    padding-top: 10px;
+   
+}
+
+.split2{
+    height: 30%;
+    width: 45.5%;
+    position: absolute;
+    z-index: 1;
+    top: 65%;
+    overflow-x: hidden;
+    padding-top: 15px;
+
+
+}
+
+.left {
+    left: 2%;
+    background-color: #DEDDDC;
+    padding: 10px;
+}
+
+.right {
+    right: 2%;
+    background-color: #DEDDDC;
+    padding: 10px;
+}
+
+.left2{
+     left: 2%;
+    background-color: #DEDDDC;
+    padding: 10px;
+
+}
+
+.right2{
+     right: 2%;
+    background-color: #DEDDDC;
+    padding: 10px;
+
+}
+
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.centered img {
+    width: 135px;
+   
+}
+.centered2 img {
+    width: 135px;
+   
+}
+
+ul.list-style{
+    list-style-type:circle;
+    font-size: 1.0em;
+    text-align: auto;
+    padding: 10px 20px;
+    list-style-position: inside;
+     }
+     
+</style>
+</head>
+<body>
+  <div class="nav">
+         <nav>
+            <ul>
+               <li><a href="/projectplan">Project Plan</a></li>
+               <li><a href="/page3">Specifications</a></li>
+               <li><a href="/profile">About Us</a></li>
+                <li><a href="/first">Home</a></li>
+               
+            </ul>
+         </nav>
+      </div>
+<h1>Specifications</h1>
+
+<div class="split left">
+  <div class="centered">
+    <img src="/public/img/sky.jpg" alt="Avatar woman">
+   <h2>Purpose of Project</h2>
+    <p>Our purpose is to create an easy and interactive way for college students to be able to find activities and or events that are relatively low cost.</p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="/public/img/sky.jpg" alt="Avatar man">
+   <h2>Database Design</h2>
+    <p>We want to create a sql database of our events. We also would like to create queries that will sort the feed from “most liked” posts to “least liked” posts as well as create a query to sort from “free” to “most expensive."</p>
+  </div>
+</div>
+
+<div class="split2 left2">
+  <div class="centered2">
+    <img src="/public/img/sky.jpg" alt="Avatar man">
+    <h2>List of Deliverables</h2>
+    <ul class= "list-style">
+      <li>Login functionality</li>
+      <li>"Like" functionality</li>
+      <li>Event feed</li>
+      <li>"Save Event" functioinality</li>
+  </div>
+</div>
+
+<div class="split2 right2">
+  <div class="centered2">
+    <img src="public/img/sky.jpg" alt="Avatar man">
+    <h2>Use Case Analysis</h2>
+     <ul class= "list-style">
+        <li>Users login or create an account</li>
+        <li>Likes or comments or both</li>
+        <li>Cretes a saved feed</li>
+  </div>
+</div>
+     
+</body>
+</html> 

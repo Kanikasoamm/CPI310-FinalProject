@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Register</title>
+  <style>
+    body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #eee;
+          color: #333;
+          max-width: 800px;
+          margin: auto;
+          padding: 30px;
+      }
+  </style>
+</head>
+
+<body>
+  <form method="POST" action="register">
+    <h4>register</h4>
+    <h5 style="color: red">{{ registerError }}</h5>
+    <input type="text" placeholder="email" name="email" />
+    <input type="password" placeholder="password" name="password" />
+    <input type="submit" value="register" onclick="/feed" />
+  </form>
+</body>
+
+</html>

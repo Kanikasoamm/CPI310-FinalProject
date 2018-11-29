@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/grayscale.css" rel="stylesheet">
+     <link href="/public/css/style.css" rel="stylesheet">
+      <link href="/public/css/button.css" rel="stylesheet">
+      <link href="/public/css/signupbutton.css" rel="stylesheet">
+
+	    
+</head>
+<body>
+
+	<header>	
+		<h1>Event Submission</h1>
+		
+<div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="profile">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="page3">Specifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="projectplan">Project Plan</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="feed">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="first">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </header>
+<p id="output"></p>
+<div class= "box">
+
+
+	<form method="post" action="text">
+
+		
+		<h2>Event Name:</h2>
+		<input name = "eventName" type="text">
+
+		<h2>Event Description:</h2>
+		<input name = "eventDescription" type = "text">
+
+		<h2>Event Cost:</h2>
+		<input type="text" name="eventCost">
+
+		<h2>Event Location:</h2>
+		<input type="text" name="eventLocation">
+		<br><br>
+		<input type="submit" />
+	</form>
+
+
+
+  {% for texts in text %}
+        <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
+    {% endfor %}
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

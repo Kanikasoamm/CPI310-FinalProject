@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/grayscale.css" rel="stylesheet">
+     <link href="/public/css/style.css" rel="stylesheet">
+      <link href="/public/css/button.css" rel="stylesheet">
+      <link href="/public/css/signupbutton.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+       
+        
+          
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="profile">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="page3">Specifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="projectplan">Project Plan</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="feed">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="first">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+              
+          <h1 class="mx-auto my-0 text-uppercase">FreeFinder</h1>
+      
+         <button class="btn" onclick="document.getElementById('id01').style.display='block'"style="width:auto;">Login</button>
+         <button onclick="document.getElementById('id02').style.display='block'" class="btn" style="width:auto;">Register</button>
+
+<div id="id01" class="modal">
+  
+   <form class="modal-content animate" action="/login" method="POST">
+    
+
+     <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Username" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<div id="id02" class="modal2">
+ 
+   <form class="modal-content animate" action="/register" method="POST">
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label for="password-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+      
+     <!--  <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label> -->
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal2.style.display = "none";
+    }
+}
+
+
+</script>
+
+           </div>
+      </div>
+
+     
+
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Our Mission</h2>
+            <p class="text-white-50">At Freebie Finder, we value the importance of meeting the needs of our generation who are looking for adventure but do not have the expenses to meet them. As a team, we are searching and working together to find ways our users can visit National Parks, museums, botanical gardens and other events at an inexpensive cost! As college students, ourselves, we understand the need to experience and enjoy the beauty of adventuring and bask in the memories that come with them. We want to make sure that everyone has the opportunity to create those memories without any hindrance while also having the freedom to decide where they want those memories to start, so join us as we take you on your next excursion to the Grand Canyon or a Food Festival!</p>
+          </div>
+        </div>
+         <h3 class="text-white mb-4">How You Can Help</h3>
+            <p class="text-white-50">Freebie Finder's information is user-based! Do you know of a free event near you? Are you passionate about a local park or yearly event? With a simple log-in, you could join hundreds of users in creating a network of information. If you go to the event and enjoyed it, make sure to leave a rating on the event and the user who submitted it. By leaving a rating on the event, you could bring awareness to an event you love.</p>
+          </div>
+        </div>
+        <img src="" class="img-fluid" alt="">
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="/public/img/canyon.jpg" alt="">
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Grand Canyon</h4>
+              <p class="text-black-50 mb-0">Spend a weekend adventuring through the Grand Canyon</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="/public/img/festival.jpg" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Food Festival</h4>
+                  <p class="mb-0 text-white-50"></p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="/public/img/ballon.jpg" alt="">
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white">Hot Air Balloon Festival</h4>
+                  <p class="mb-0 text-white-50"></p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Your Website 2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/public/vendor/jquery/jquery.min.js"></script>
+    <script src="/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/public/js/grayscale.min.js"></script>
+
+  </body>
+
+</html>
