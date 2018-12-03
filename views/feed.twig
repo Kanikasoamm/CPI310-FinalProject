@@ -110,6 +110,28 @@ ul.list-style{
     text-align: justify;
     font-size: 18px;
 }
+
+.like button {
+    display: inline-block;
+    left:30%;
+    max-width: 5%;
+    margin: 40px auto 0px;
+    text-align: center;
+    background: #ed2553;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    padding: 10px 17px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    transform: translateY(4px);
+}
+
 </style>
 
 	<title></title>
@@ -188,5 +210,33 @@ ul.list-style{
 <form>
       <input type="button" value="Add Event" onclick=  "window.location.href='/form'"</a>
 </form>
+<div class="like">
+
+
+
+    {% for texts in text %}
+        <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
+        <h3 class="likeOutput">0<h3>
+        <button onclick="like({{loop.index}})">like</button>
+    {% endfor %}
+    {% if not text %}
+    {% endif %}
+    </div>
+<script>
+var likesEle = document.getElementsByClassName("likeOutput");
+var postsAlreadyLikedArray = [];
+for (var i=0; i < likesEle.length; i++) {
+    var ran = Math.floor((Math.random() * 1000) + 1);
+    likesEle[i].innerHTML = ran;
+}
+
+function like(index) {
+  if(!(postsAlreadyLikedArray.includes(index))) {
+    var post = likesEle[index - 1].innerHTML;
+    likesEle[index - 1].innerHTML = parseInt(post) + 1;
+    postsAlreadyLikedArray.push(index);
+  }
+}
+</script>
 </body>
 </html>
