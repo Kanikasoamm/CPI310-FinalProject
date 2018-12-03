@@ -14,7 +14,6 @@
      <link href="/public/css/style.css" rel="stylesheet">
       <link href="/public/css/button.css" rel="stylesheet">
       <link href="/public/css/signupbutton.css" rel="stylesheet">
-
 <style>
 body {
     font-family: Arial;
@@ -98,11 +97,9 @@ ul.list-style{
      }
 
 
-</style>
-      <style>
-      .box2{
-  color: white;
-  background-color:grey;
+.box2{
+    color: white;
+    background-color:#DEDDDC;
     width: 80%;
     border: 10px solid white;
     padding: auto;
@@ -134,9 +131,9 @@ ul.list-style{
 
 </style>
 
-	<title></title>
-	
-	      <!-- Navigation -->
+  <title></title>
+  
+        <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
        
@@ -146,12 +143,6 @@ ul.list-style{
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="profile">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="page3">Specifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="projectplan">Project Plan</a>
             </li>
              <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="feed">Feed</a>
@@ -167,61 +158,54 @@ ul.list-style{
 </head>
 <body>
   
-	<header>	
-		<h1>Feed</h1>
-		
+  <header>  
+    <h1>Feed</h1>
+    
 
   </header>
 
 
     {% for texts in text %}
+    <div class="like">
     <div class="box2">
         <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
+        <button onclick="like({{loop.index}})">like</button>
+         <em class="likeOutput">0</em>
     </div>
+  </div>
     {% endfor %}
     {% if not text %}
 
 <div class= "box2">
-	<h2>MU karaoke night</h2>
-	<h2>November 22nd, 2017</h2>
-	<h3>Price range: free to ASU student</h3>
-	Karaoke night from 6PM - 9PM. All skill levels welcome! Free for ASU students, must bring ASU ID to participate.
+  <h2>MU karaoke night</h2>
+  <h2>November 22nd, 2017</h2>
+  <h3>Price range: free to ASU student</h3>
+  Karaoke night from 6PM - 9PM. All skill levels welcome! Free for ASU students, must bring ASU ID to participate.
 </div>
 <div class= "box2">
-	<h2>Hiking for Charity</h2>
-	<h2>February 22nd, 2019</h2>
-	<h3>Price range: free, donations appreciated</h3>
-	Join ASU hiking club as they scale A mountain. The club will be accepting donations, all proceeds will go to the club's favorite non-profit. Students will meet on the west side of ASU's Fulton Center at 4PM, by the Panda Express.  
+  <h2>Hiking for Charity</h2>
+  <h2>February 22nd, 2019</h2>
+  <h3>Price range: free, donations appreciated</h3>
+  Join ASU hiking club as they scale A mountain. The club will be accepting donations, all proceeds will go to the club's favorite non-profit. Students will meet on the west side of ASU's Fulton Center at 4PM, by the Panda Express.  
 </div>
 <div class= "box2">
-	<h2>Lorem</h2>
-	<h2>November 2019</h2>
-	<h3>Price range: free</h3>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
+  <h2>Lorem</h2>
+  <h2>November 2019</h2>
+  <h3>Price range: free</h3>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
 </div>
 <div class= "box2">
-	<h2>Ipsum @ Dolor</h2>
-	<h2>January 2020</h2>
-	<h3>Price range: free, food not included</h3>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
+  <h2>Ipsum @ Dolor</h2>
+  <h2>January 2020</h2>
+  <h3>Price range: free, food not included</h3>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum risus ut tincidunt ullamcorper. Fusce egestas tortor tempus nulla faucibus varius at eu arcu.
 </div>
 
 {% endif %}
 <form>
       <input type="button" value="Add Event" onclick=  "window.location.href='/form'"</a>
 </form>
-<div class="like">
 
-
-
-    {% for texts in text %}
-        <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
-        <h3 class="likeOutput">0<h3>
-        <button onclick="like({{loop.index}})">like</button>
-    {% endfor %}
-    {% if not text %}
-    {% endif %}
-    </div>
 <script>
 var likesEle = document.getElementsByClassName("likeOutput");
 var postsAlreadyLikedArray = [];
@@ -238,5 +222,13 @@ function like(index) {
   }
 }
 </script>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Freebie Finder 2018
+      </div>
+    </footer>
+
 </body>
 </html>
