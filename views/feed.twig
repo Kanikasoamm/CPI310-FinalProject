@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
     <!-- Bootstrap core CSS -->
     <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,7 +15,92 @@
       <link href="/public/css/button.css" rel="stylesheet">
       <link href="/public/css/signupbutton.css" rel="stylesheet">
 
-      <style>.box2{
+<style>
+body {
+    font-family: Arial;
+    color: white;
+}
+
+h1{
+  text-align: center;
+  font-family: Arial;
+  color: black;
+}
+nav ul{
+      list-style-type:none;
+      margin:10;
+      padding:10px;
+      overflow: hidden;
+      }
+    nav li{
+            float:right;
+            left:20%;
+      }
+     nav li a{
+            display: block;
+            color: white;
+            text-align: left;
+            padding: 12px 14px;
+            text-decoration: none;
+      }
+
+       nav a:link{
+      color:#7B9393;
+      }
+      nav a:visited{
+      color:#7B9393;
+      }
+      nav a:hover{
+      color:#D8C6AD;
+      }
+
+.split {
+    height: 61%;
+    width: 43.5%;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding: 20px;
+}
+
+.left {
+    left: 2%;
+    background-color: #DEDDDC;
+}
+
+.right {
+    right: 2%;
+    background-color: #DEDDDC;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 150px;
+   
+}
+
+
+ul.list-style{
+    list-style-type:circle;
+    font-size: 1.0em;
+    text-align: auto;
+    padding: 10px 20px;
+    list-style-position: inside;
+     }
+
+
+</style>
+      <style>
+      .box2{
   color: white;
   background-color:grey;
     width: 80%;
@@ -26,11 +109,18 @@
     margin: 90px;
     text-align: justify;
     font-size: 18px;
-}</style>
+}
+</style>
 
 	<title></title>
 	
-	 <div class="collapse navbar-collapse" id="navbarResponsive">
+	      <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+       
+        
+          
+        <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="profile">About Us</a>
@@ -49,20 +139,23 @@
             </li>
           </ul>
         </div>
-     </head>
+      </div>
+    </nav>
+
+</head>
 <body>
+  
 	<header>	
 		<h1>Feed</h1>
 		
 
   </header>
-<form>
-			<input type="button" value="Add Event" onclick=  "window.location.href='/form'"</a>
-</form>
-<input type="button" value="home" onclick=  "window.location.href='/first'"</a>
+
 
     {% for texts in text %}
+    <div class="box2">
         <h3><em><b>{{texts.eventName}}</b></em></h3><br> <h4>{{texts.eventDescription}}</h4><br> <h4>{{texts.eventCost}}</h4><br> <h4>{{texts.eventLocation}}</h4>
+    </div>
     {% endfor %}
     {% if not text %}
 
@@ -92,13 +185,8 @@
 </div>
 
 {% endif %}
-
+<form>
+      <input type="button" value="Add Event" onclick=  "window.location.href='/form'"</a>
+</form>
 </body>
 </html>
-
-
-
-
-
-
-
